@@ -63,7 +63,7 @@ public class SwerveDrive extends SubsystemBase {
    */
   public SwerveDrive() {
     // Note: NavX calibration takes approximately 3 to 4 seconds.
-    navX.calibrate();
+   // navX.calibrate(); //TODO: Might need to calibrate
   }
 
   @Override

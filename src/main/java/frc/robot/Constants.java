@@ -1,10 +1,8 @@
 package frc.robot;
 
-import com.revrobotics.CANSparkMax.IdleMode;
-
+import com.revrobotics.CANSparkBase.IdleMode;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
-import edu.wpi.first.math.util.Units;
 
 import java.lang.Math;
 
@@ -12,45 +10,19 @@ public final class Constants {
 
   // CAN IDs (Controller Area Network)
   public static final class CANID {
-    public static final int REAR_RIGHT_DRIVING_SPARKMAX = 10;
-    public static final int REAR_RIGHT_TURNING_SPARKMAX = 11;
-    public static final int FRONT_RIGHT_DRIVING_SPARKMAX = 12;
-    public static final int FRONT_RIGHT_TURNING_SPARKMAX = 13;
-    public static final int FRONT_LEFT_DRIVING_SPARKMAX = 14;
-    public static final int FRONT_LEFT_TURNING_SPARKMAX = 15;
-    public static final int REAR_LEFT_DRIVING_SPARKMAX = 16;
-    public static final int REAR_LEFT_TURNING_SPARKMAX = 17;
-    public static final int HAND_SPARKMAX = 21;
-    public static final int ARM_SPARKMAX = 22;
+    public static final int REAR_RIGHT_DRIVING_SPARKMAX = 28;
+    public static final int REAR_RIGHT_TURNING_SPARKMAX = 27;
+    public static final int FRONT_RIGHT_DRIVING_SPARKMAX = 26;
+    public static final int FRONT_RIGHT_TURNING_SPARKMAX = 25;
+    public static final int FRONT_LEFT_DRIVING_SPARKMAX = 24;
+    public static final int FRONT_LEFT_TURNING_SPARKMAX = 23;
+    public static final int REAR_LEFT_DRIVING_SPARKMAX = 22;
+    public static final int REAR_LEFT_TURNING_SPARKMAX = 21;
   }
-
-  public static final class HandConstants {
-    public static final double INTAKE_SPEED = -0.6;
-    public static final double OUTTAKE_SPEED = 0.3;
-    public static final double SHOOT_SPEED = 0.75;
-    public static final int HAND_LIMIT_SWITCH_DIO_CHANNEL = 0;
-  }
-
-  public static final class ArmConstants {
-    public static final double ARM_GEAR_RATIO = 1.0 / (98); // 1:98 gear ratio
-    public static final int ARM_COUNTS_PER_REV = 42;
-    public static final double POSITION_CONVERSION_FACTOR = ARM_GEAR_RATIO * 2.0 * Math.PI;
-    public static final double MIN_ARM_LIMIT = -0.1;
-    public static final double MAX_ARM_LIMIT = 1.5;
-    public static final double ARM_LOW_POS = 0.0;
-    public static final double ARM_MED_POS = 0.5;
-    public static final double ARM_HIGH_POS = 1.0;
-    public static final double ARM_P = 0.1;
-    public static final double ARM_ALLOWED_ERROR = 0.05;
-    public static final double ARM_SPEED_GOVERNOR = 0.1;
-    public static final int ARM_LIMIT_SWITCH_DIO_CHANNEL = 9;
-
-  }
-
   // Swerve Drive (Drive Train)
   public static final class SwerveDriveConstants {
-    public static final double DRIVETRAIN_WIDTH = Units.inchesToMeters(26.09);
-    public static final double DRIVETRAIN_LENGTH = Units.inchesToMeters(26.06);
+    public static final double DRIVETRAIN_WIDTH = 0.653;
+    public static final double DRIVETRAIN_LENGTH = 0.653;
 
     public static final double VIRTUAL_LOW_GEAR_RATE = 0.4;
     public static final double VIRTUAL_HIGH_GEAR_RATE = 0.9;
